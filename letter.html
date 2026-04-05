@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For my babyy</title>
+    <link rel="stylesheet" href="style_letter.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="love_song.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Music Controls -->
+    <div class="music-controls">
+        <button id="backBtn">-5s</button>
+        <button id="pauseBtn">PAUSE</button>
+        <button id="forwardBtn">+5s</button>
+    </div>
+
+    <div class="letter-container">
+
+        <h1>Hi Baby Irish♡</h1>
+
+        <img src="letter_pic1.png" class="letter-img">
+
+        <p>
+          I hope you enjoyed our date today :> Always remember na I love youuu, and I’m so prouddd of youuu, hmmm?? I’m always here para sayo and para rin isupport ka sa lahat. I lovee youuu so muchiee. And here’s a bouquet of me for youu!! Mmmmwaaaaaa💐<br><br>
+          There’s a lot of things na gusto kong sabihin, and I wrote most of it here sa coffee paper na ginawa ko. You can open it na and read it with me, or you can just listen na lang sa mga sasabihin ko now kasi ito rin ’yon, ni-record ko lang HAHAHA. But first, of course, I loveee youuu so muchieeeee<br><br>
+            –James
+        </p>
+
+        <img src="letter_pic2.jpg" class="letter-img">
+
+    </div>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const backBtn = document.getElementById("backBtn");
+        const forwardBtn = document.getElementById("forwardBtn");
+        const pauseBtn = document.getElementById("pauseBtn");
+
+        // Try autoplay on load
+        window.addEventListener("load", () => {
+            music.play().catch(() => {
+                console.log("Autoplay blocked. Waiting for interaction.");
+            });
+        });
+
+        // Fallback: play on first tap anywhere
+        document.body.addEventListener("click", () => {
+            music.play();
+        }, { once: true });
+
+        // Button functions
+        backBtn.addEventListener("click", () => {
+            music.currentTime -= 5;
+        });
+
+        forwardBtn.addEventListener("click", () => {
+            music.currentTime += 5;
+        });
+
+        pauseBtn.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+                pauseBtn.textContent = "⏸ PAUSE";
+            } else {
+                music.pause();
+                pauseBtn.textContent = "▶️ PLAY";
+            }
+        });
+    </script>
+
+</body>
+</html>

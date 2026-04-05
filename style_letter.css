@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("new_background.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.letter-container {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.letter-img {
+    width: 250px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.music-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.music-controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.music-controls button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
